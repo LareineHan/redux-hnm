@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
 import '../styles/Signup.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { authenticateAction } from '/Users/lareinehan/noonaproject/hnm-redux-ver/src/redux/actions/authenticateAciton';
+import { authenticateAction } from '../redux/actions/authenticateAction';
 
 const Signup = () => {
 	const navigate = useNavigate();

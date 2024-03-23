@@ -11,7 +11,7 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { authenticateAction } from '/Users/lareinehan/noonaproject/hnm-redux-ver/src/redux/actions/authenticateAciton';
+import { authenticateAction } from '../redux/actions/authenticateAction';
 const Navbar = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
