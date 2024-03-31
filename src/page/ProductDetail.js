@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
+import Form from 'react-bootstrap/Form';
 import '../styles/ProductDetail.css';
 import { productAction } from '../redux/actions/productAction';
 
@@ -38,13 +39,21 @@ const ProductDetail = () => {
 					<div className='detail-is-choice'>
 						{isChoice === true ? 'Conscious choice' : ''}
 					</div>
-					<select name='detail-size' id='size'>
-						<option value=''>Select Size</option>
+
+					<Form.Select aria-label='detail-page-size' id='size'>
+						<option>Select Size</option>
 						{sizeOptions?.map((size) => (
-							<option value={size}>{size}</option> // sizeOptions가 있을 때만 실행
-							// 여기에 default SELECT라는 option 맨 위에 추가하기. -> 어떻게?
+							<option value={size}>{size}</option>
 						))}
-					</select>
+					</Form.Select>
+					<Container className='Btns'>
+						<Button variant='outline-dark' className='add-btn'>
+							ADD TO CART
+						</Button>
+						<Button variant='dark' className='buy-btn'>
+							BUY NOW
+						</Button>
+					</Container>
 				</div>
 			</Container>
 		</div>
